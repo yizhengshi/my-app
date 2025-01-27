@@ -210,3 +210,17 @@
         width: 100%;
     }
 }
+
+.tech-tag {
+    background-color: #EDF2F7;
+    color: #2D3748;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.2s ease;
+}
+
+.tech-tag:hover {
+    background-color: #E2E8F0;
+}

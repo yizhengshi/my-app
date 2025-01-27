@@ -13,7 +13,6 @@ class Projects extends React.Component {
                 <ProjectOverview
                     title="Computer Vision for Industrial Quality Inspection"
                     year="2023"
-                    word = "Tech Stack: "
                     tech = "Python, Sklearn, kNN, CNN, Edge Detection, Augmentation"
                     description={
                         <>
@@ -33,7 +32,6 @@ class Projects extends React.Component {
                 <ProjectOverview
                     title="Pandas Kitchen"
                     year="2022"
-                    word = "Tech Stack: "
                     tech=" React.js, JavaScript, Node.js, MongoDB"
                     description={
                         <>

@@ -41,7 +41,6 @@ class ProjectOverview extends React.Component {
         </div>
         <div className="project-row space-between" style={{ marginTop: "16px", alignItems: "center" }}>
           <div className="project-tech-section">
-            <div className="project-techword">{this.props.word}</div>
             <div className="project-tech-tags">
               {techStack.map((tech, index) => (
                 <TechTag key={index} tech={tech.trim()} />
