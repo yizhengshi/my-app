@@ -1,0 +1,121 @@
+.experience-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-header {
+  margin-bottom: 1.5rem;
+}
+
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.experience-year {
+  color: #718096;
+  font-weight: 500;
+}
+
+.meta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-position {
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.experience-location {
+  color: #718096;
+}
+
+.experience-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack-container {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.tech-stack-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-item {
+    padding: 1.5rem;
+  }
+
+  .title-section,
+  .meta-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-year,
+  .experience-location {
+    margin-top: 0.25rem;
+  }
+
+  .tech-tags {
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.7rem;
+  }
+} 

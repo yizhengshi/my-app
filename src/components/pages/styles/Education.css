@@ -1,0 +1,124 @@
+.education-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.education-header {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.header-line {
+  border-top: 1px solid #000;
+  margin: 0.5rem 0 2rem 0;
+}
+
+.education-entry {
+  margin-bottom: 2rem;
+}
+
+.education-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.education-main {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.school-logo {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.school-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.university-name {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #000;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.degree-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.degree-list > li {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.details-list {
+  list-style: circle;
+  padding-left: 2rem;
+  margin: 0.25rem 0;
+}
+
+.details-list li {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.coursework-header {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #000;
+  margin: 2rem 0 1rem;
+}
+
+.course-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.course-list li {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-content {
+    flex-direction: column;
+  }
+
+  .education-main {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .school-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .course-list {
+    padding-left: 1.2rem;
+  }
+} 

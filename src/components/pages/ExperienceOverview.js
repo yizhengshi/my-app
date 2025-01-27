@@ -1,54 +1,46 @@
 import React from "react";
 import { Container, Button, Image } from "react-bootstrap";
+import "./styles/ExperienceOverview.css";
 
-class ExperienceOverview extends React.Component {
-  getButtons = () => {
-    if (this.props.github) {
-    //     if (this.props.course) {
+const ExperienceOverview = (props) => {
+  const renderTechStack = () => {
+    if (!props.tech) return null;
+    
+    const techArray = props.tech.split(',').map(tech => tech.trim());
     return (
-      <div className="project-row" style={{ marginTop: "2vh" }}>
-        <Button
-          className="project-button"
-          target="_blank"
-          href={this.props.github}
-        >
-          See on GitHub
-        </Button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button
-          className="project-button"
-          target="_blank"
-          href={this.props.web}
-        >
-          See on Web
-        </Button>
+      <div className="tech-stack-container">
+        <div className="tech-stack-label">{props.word || "Tech Stack:"}</div>
+        <div className="tech-tags">
+          {techArray.map((tech, index) => (
+            <span key={index} className="tech-tag">
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     );
   };
-  }
 
-  render() {
-    return (
-      <Container className="project-overview">
-        <div className="project-row space-between">
-          <div className="project-title">{this.props.title}</div>
-          <div className="project-location">{this.props.year}</div>
+  return (
+    <Container className="experience-item">
+      <div className="experience-header">
+        <div className="title-section">
+          <div className="experience-title">{props.title}</div>
+          <div className="experience-year">{props.year}</div>
         </div>
-        <div className="project-row space-between">
-          <div className="project-position">{this.props.position}</div>
-          <div className="project-location">{this.props.location}</div>
+        <div className="meta-section">
+          <div className="experience-position">{props.position}</div>
+          <div className="experience-location">{props.location}</div>
         </div>
-        <div className="project-row space-between" style={{ marginTop: "1vh" }}>
-        <div className="project-description">{this.props.description}</div>
-        </div>
-        <div className="project-row">
-          <div className="project-techword">{this.props.word}</div>
-          &nbsp;
-          <div className="project-techbold">{this.props.tech}</div>
-        </div>
-      </Container>
-    );
-  }
-}
+      </div>
+      
+      <div className="experience-description">
+        {props.description}
+      </div>
+      
+      {renderTechStack()}
+    </Container>
+  );
+};
 
 export default ExperienceOverview;

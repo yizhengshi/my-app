@@ -1,6 +1,8 @@
 .projects-header {
     margin-top: 0.3vh;
-    font-size: 1.8vw;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #000;
 }
 
 .projects-container {
@@ -10,15 +12,13 @@
     border-radius: 1vw;
     padding-left: 2.5vw;
     padding-right: 2.5vw;
-    padding-top: 2.5vh;
+    padding-top: 50px;
     padding-bottom: 2.5vh;
     margin-top: 5vh;
 }
 
 .project-overview {
-    margin-top: 2vh;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    margin: 20px 0;
 }
 
 .project-tech {
@@ -32,14 +32,16 @@
 
 }
 .project-techword {
-    font-size: 1vw;
-    /* font-style: italic; */
-    font-weight: bold;
+    font-size: 1rem;
+    color: #666;
+    margin-right: 8px;
+    margin-top: 4px;
 }
 
 .project-title {
-    font-size: 1.2vw;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
 }
 .project-position {
     font-size: 1vw;
@@ -52,29 +54,71 @@
 }
 
 .project-year {
-    font-size: 1vw;
+    font-size: 1.2rem;
+    color: #666;
 }
 
 .project-row {
     display: flex;
-    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
 }
 
 .space-between {
     justify-content: space-between;
 }
 
-
-
 .project-description {
-    font-size: 1.0vw;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
     width: 100%;
 }
 
+.project-tech-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-buttons-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: auto;
+}
+
 .project-button {
-    font-size: 1.0vw;
-    background-color: #5277f1;
-    border-color: #3277F1;
+    background-color: transparent;
+    border: 1px solid #6366F1;
+    color: #6366F1;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.project-button:hover {
+    background-color: #6366F1;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-techword {
+    font-size: 1rem;
+    color: #666;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -148,5 +192,21 @@
     }
     .project-button {
         font-size: 3.5vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .project-row.space-between {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .project-buttons-container {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+    
+    .project-tech-section {
+        width: 100%;
     }
 }

@@ -1,48 +1,55 @@
 import React from "react";
-import { Container, Button, Image } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
+import TechTag from "./TechTag";
 
 class ProjectOverview extends React.Component {
   getButtons = () => {
     if (this.props.github) {
-    //     if (this.props.course) {
-    return (
-      <div className="project-row" style={{ marginTop: "2vh" }}>
-        <Button
-          className="project-button"
-          target="_blank"
-          href={this.props.github}
-        >
-          See on GitHub
-        </Button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button
-          className="project-button"
-          target="_blank"
-          href={this.props.web}
-        >
-          See on Web
-        </Button>
-      </div>
-    );
+      return (
+        <div className="project-buttons-container">
+          <Button
+            className="project-button"
+            target="_blank"
+            href={this.props.github}
+          >
+            GitHub
+          </Button>
+          <Button
+            className="project-button"
+            target="_blank"
+            href={this.props.web}
+          >
+            Demo
+          </Button>
+        </div>
+      );
+    }
+    return null;
   };
-  }
 
   render() {
+    const techStack = this.props.tech.split(", ");
+
     return (
       <Container className="project-overview">
         <div className="project-row space-between">
           <div className="project-title">{this.props.title}</div>
           <div className="project-year">{this.props.year}</div>
         </div>
-        <div className="project-row space-between" style={{ marginTop: "1vh" }}>
-        <div className="project-description">{this.props.description}</div>
+        <div className="project-row space-between" style={{ marginTop: "12px" }}>
+          <div className="project-description">{this.props.description}</div>
         </div>
-        <div className="project-row">
-          <div className="project-techword">{this.props.word}</div>
-          &nbsp;
-          <div className="project-techbold">{this.props.tech}</div>
+        <div className="project-row space-between" style={{ marginTop: "16px", alignItems: "center" }}>
+          <div className="project-tech-section">
+            <div className="project-techword">{this.props.word}</div>
+            <div className="project-tech-tags">
+              {techStack.map((tech, index) => (
+                <TechTag key={index} tech={tech.trim()} />
+              ))}
+            </div>
+          </div>
+          {this.getButtons()}
         </div>
-        {this.getButtons()}
       </Container>
     );
   }

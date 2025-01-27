@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: white;
+  border-top: 1px solid #eee;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.footer-relative {
+  position: relative;
+  margin-top: auto;
+}
+
+.footer-content {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 400;
+} 

@@ -1,0 +1,18 @@
+.tech-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  margin: 4px;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background-color: #4F46E5;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+} 
