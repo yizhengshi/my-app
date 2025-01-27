@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './styles/Resume.css';
-import resume from '../../assets/resume.pdf';
+import resume from '../../assets/ResumeCopy3.pdf';
 
 const Resume = () => {
   return (
@@ -13,7 +13,7 @@ const Resume = () => {
           data={resume}
           type="application/pdf"
           width="100%"
-          height="1000px"
+          height="1200px"
         >
           <p>
             Unable to display PDF file.{' '}

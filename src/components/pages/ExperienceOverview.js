@@ -9,7 +9,6 @@ const ExperienceOverview = (props) => {
     const techArray = props.tech.split(',').map(tech => tech.trim());
     return (
       <div className="tech-stack-container">
-        <div className="tech-stack-label">{props.word || "Tech Stack:"}</div>
         <div className="tech-tags">
           {techArray.map((tech, index) => (
             <span key={index} className="tech-tag">

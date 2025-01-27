@@ -1,13 +1,14 @@
 import React from 'react';
-import {Container} from 'react-bootstrap';
 import ExperienceOverview from './ExperienceOverview';
+import './styles/ExperienceOverview.css';
 
 const Experience = () => {
     return (
-        <Container className="projects-container" style={{marginBottom: 75}}>
-            <div className="projects-header">
+        <div className="experience-section">
+            <div className="experience-header">
                 Work Experience
             </div> 
+            <hr className="hline" />
             <ExperienceOverview
                 title="Morningstar"
                 year="May 2024 - Aug 2024"
@@ -31,7 +32,7 @@ const Experience = () => {
                     </>
                 }
             />
-            <hr />
+            <hr className="experience-divider" />
             <ExperienceOverview
                 title="Barry-Wehmiller"
                 year="May 2023 - Aug 2023"
@@ -53,7 +54,7 @@ const Experience = () => {
                     </>
                 }
             />
-            <hr />
+            <hr className="experience-divider" />
             <ExperienceOverview
                 title="FIMEC"
                 year="May 2022 - Aug 2022"
@@ -75,7 +76,7 @@ const Experience = () => {
                     </>
                 }
             />
-            <hr />
+            <hr className="experience-divider" />
             <ExperienceOverview
                 title="Yin's Machine Learning Research Group"
                 year="April 2022 - Nov 2022"
@@ -93,7 +94,7 @@ const Experience = () => {
                     </>
                 }
             />
-        </Container> 
+        </div>
     );
 }
 
