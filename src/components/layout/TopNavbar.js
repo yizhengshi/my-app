@@ -5,7 +5,7 @@ const TopNavbar = () => {
     const linkStyle = {
         fontWeight: "500",
         color: "#FFFFFF",
-        paddingLeft: "25px"
+        paddingLeft: "20px"
     };
 
     return ( 
