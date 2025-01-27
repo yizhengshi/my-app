@@ -8,7 +8,6 @@ const Experience = () => {
             <div className="projects-header">
                 Work Experience
             </div> 
-            <hr className="hline" />
             <ExperienceOverview
                 title="Morningstar"
                 year="May 2024 - Aug 2024"
